@@ -8,7 +8,7 @@ void fail(char* message) {
 int count_stdin() {
   int count = 0;
   while(getchar() != EOF) {
-  	count++;
+    count++;
   }
   return count;
 }
@@ -16,14 +16,14 @@ int count_stdin() {
 int count_file_characters(char* filename) {
   FILE* file = fopen(filename, "r");
   if(!file) {
-  	char message[256];
-  	sprintf(message, "%s: No such file or directory", filename);
-  	fail(message);
+    char message[256];
+    sprintf(message, "%s: No such file or directory", filename);
+    fail(message);
   }
 
   int count = 0;
   while(fgetc(file) != EOF) {
-  	count++;
+    count++;
   }
   return count;
 }
